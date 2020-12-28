@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "build": "npx tailwindcss-cli@latest build ./tailwind.css -o ./style/main.css"
+  },
+  "dependencies": {
+    "tailwindcss": "^2.0.2"
+  },
+  "devDependencies": {},
+  "name": "apricots-concept",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT"
+}
