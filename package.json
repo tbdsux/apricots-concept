@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "build": "npx tailwindcss-cli@latest build ./tailwind.css -o ./style/main.css"
+    "build": "npx tailwindcss-cli@latest build ./tailwind.css -o ./style/main.css",
+    "prod": "NODE_ENV=production npx tailwindcss-cli@latest build ./tailwind.css -o ./style/main.css"
   },
   "dependencies": {
     "tailwindcss": "^2.0.2"
