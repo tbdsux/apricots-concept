@@ -24,7 +24,7 @@
   >
     <!-- header section -->
     <header
-      class="w-full mx-auto fixed z-50"
+      class="w-full mx-auto"
       :class="{'bg-white': scroll}"
       x-on:resize.window="show = window.outerWidth >= 768 ? true : false"
       x-on:load.window="show = window.outerWidth >= 768 ? true : false"
@@ -76,7 +76,7 @@
         <ul
           x-show="show"
           @click.away="show=window.outerWidth >= 768 ? true : false"
-          class="flex flex-col md:flex-row text-center py-4 md:py-0 text-xl font-light"
+          class="flex flex-col md:flex-row text-center py-4 md:py-0 text-lg font-light"
         >
           <li class="py-2 md:py-0 px-2 md:px-4">
             <a href="#" class="tracking-wide hover:text-orange">Discover</a>
@@ -106,7 +106,7 @@
               clip-rule="evenodd"
             />
           </svg>
-          <span class="ml-1 text-xl hidden lg:block">Account</span>
+          <span class="ml-1 text-lg hidden lg:block">Account</span>
         </a>
       </nav>
     </header>
@@ -171,10 +171,8 @@
             Series
           </h2>
           <p class="text-xl font-light tracking-wider mt-2">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi
-            asperiores laboriosam nobis fugit dolorum odio quos, atque commodi
-            impedit explicabo voluptates facere, culpa fuga ullam sint vero
-            nostrum voluptatem nam!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
+            asperiores adipisci distinctio exercitationem quae sit.
           </p>
           <div class="mt-4 flex">
             <button
