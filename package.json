@@ -6,15 +6,7 @@
   "dependencies": {
     "tailwindcss": "^2.0.2"
   },
-  "devDependencies": {
-    "git-scripts": "^0.4.3",
-    "surge": "^0.21.7"
-  },
-  "git": {
-    "scripts": {
-      "pre-push": "yarn prod && surge --project ./ --domain apricots-concept.surge.sh"
-    }
-  },
+  "devDependencies": {},
   "name": "apricots-concept",
   "version": "1.0.0",
   "main": "index.js",
