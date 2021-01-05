@@ -16,6 +16,15 @@
       src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js"
       defer
     ></script>
+
+    <style>
+      @media (max-height: 550px) {
+        .showcase {
+          height: 100%;
+          padding: 3em 0;
+        }
+      }
+    </style>
   </head>
   <body
     class="antialiased"
@@ -24,7 +33,7 @@
   >
     <!-- header section -->
     <header
-      class="w-full mx-auto"
+      class="w-full mx-auto z-40"
       :class="{'bg-white': scroll}"
       x-on:resize.window="show = window.outerWidth >= 768 ? true : false"
       x-on:load.window="show = window.outerWidth >= 768 ? true : false"
@@ -113,16 +122,22 @@
 
     <!-- showcase section -->
     <div
-      class="h-screen flex items-center w-5/6 mx-auto relative overflow-hidden"
+      class="h-screen flex items-center w-full lg:w-5/6 mx-auto relative overflow-hidden showcase"
     >
-      <div class="">
+      <div class="w-5/6 mx-auto lg:mr-auto lg:ml-0 lg:w-3/5">
         <!-- showcase > text info header -->
         <div class="z-40">
-          <h1 class="text-8xl font-black text-orange">Hands On</h1>
-          <h2 class="text-7xl">Experience</h2>
-          <p class="my-4 text-3xl font-light tracking-wide">
+          <h1 class="text-6xl md:text-7xl xl:text-8xl font-black text-orange">
+            Hands On
+          </h1>
+          <h2 class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
+            Experience
+          </h2>
+          <p
+            class="my-4 text-xl md:text-2xl lg:text-3xl font-light tracking-wide"
+          >
             discover the cutting edge technology of the
-            <br />
+            <br class="hidden sm:block lg:hidden" />
             new alpha series, only on Alpha Mobile
           </p>
           <div class="m-2">
@@ -138,7 +153,7 @@
           <img
             src="/assets/showcase-header.png"
             alt=""
-            class="absolute bottom-0 -right-12 w-1/2 h-auto z-10"
+            class="relative sm:absolute bottom-0 -right-12 w-3/5 md:w-2/5 lg:w-1/2 h-auto z-10"
           />
         </div>
       </div>
@@ -148,15 +163,15 @@
 
     <!-- another showcase section -->
     <div
-      class="h-screen w-full mx-auto flex items-center justify-center relative overflow-hidden"
+      class="h-full py-8 md:h-screen w-full mx-auto flex items-center justify-center relative overflow-hidden showcase"
     >
-      <div class="flex items-center justify-between">
+      <div class="flex flex-col sm:flex-row items-center">
         <!-- showcase 2 > image -->
-        <div class="">
+        <div>
           <img
             src="/assets/showcase-2.png"
             alt=""
-            class="absolute w-1/2 h-full left-0 top-20 my-auto object-cover object-center z-10"
+            class="relative sm:absolute w-4/5 sm:w-1/3 lg:w-1/2 h-64 sm:h-full left-0 md:top-20 mx-auto sm:mx-0 my-auto object-cover object-center z-10"
           />
           <p
             class="font-black absolute bottom-0 left-0 text-gray-200 text-9xl z-0"
@@ -165,8 +180,10 @@
           </p>
         </div>
         <!-- showcase 2 > text info -->
-        <div class="w-3/5 px-10">
-          <h2 class="text-8xl uppercase">
+        <div
+          class="relative w-5/6 mx-auto sm:mr-0 sm:ml-auto sm:w-3/5 md:px-10"
+        >
+          <h2 class="text-6xl md:text-7xl xl:text-8xl uppercase">
             <span class="text-orange">Alpha</span>
             Series
           </h2>
@@ -174,14 +191,14 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
             asperiores adipisci distinctio exercitationem quae sit.
           </p>
-          <div class="mt-4 flex">
+          <div class="mt-4 flex flex-col lg:flex-row">
             <button
-              class="mx-1 border-2 border-orange opacity-75 hover:opacity-100 opacity py-2 px-8 text-orange text-2xl rounded-full tracking-wider"
+              class="mx-1 my-1 lg:my-0 border-2 border-orange opacity-75 hover:opacity-100 opacity py-2 px-8 text-orange text-2xl rounded-full tracking-wider"
             >
               Learn More
             </button>
             <button
-              class="mx-1 border-2 bg-orange border-orange uppercase font-black opacity-90 hover:opacity-100 opacity py-2 px-8 text-white text-2xl rounded-full tracking-wider"
+              class="mx-1 my-1 lg:my-0 border-2 bg-orange border-orange uppercase font-black opacity-90 hover:opacity-100 opacity py-2 px-8 text-white text-2xl rounded-full tracking-wider"
             >
               Buy Now
             </button>
@@ -194,11 +211,13 @@
 
     <!-- footer section -->
     <footer class="w-full py-4">
-      <div class="w-5/6 mx-auto flex items-center justify-between">
+      <div
+        class="w-5/6 mx-auto flex flex-col md:flex-row items-center justify-between"
+      >
         <p class="text-lg tracking-wide">
           Copyrights &copy; 2020 | Addie Productions | TheBoringDude
         </p>
-        <img src="/assets/logo.png" alt="" class="h-12 w-auto" />
+        <img src="/assets/logo.png" alt="" class="h-12 w-auto mt-2 md:mt-0" />
       </div>
     </footer>
   </body>
